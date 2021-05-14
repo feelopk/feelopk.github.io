@@ -16,7 +16,14 @@
     </p>
 
     {% include message.html text=post.description %}
+
+    <div style="text-align: center">
+      <a href="https://hits.seeyoufarm.com">
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ffeelopk.github.io&count_bg=%23CF3B3B&title_bg=%23E7C203&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
+      </a>
+    </div>
   </header>
+
   {% for tag_slug in post.tags %}
     {% unless tag.header-img %}
       {% assign tag = site.featured_tags | where: "slug", tag_slug | first %}
@@ -26,7 +33,6 @@
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   {% unless include.excerpt %}
     <div class="markdown-body">
-
 
 {% if post.header-img %}<div class="head-image"><img src="{{ site.url }}/{% if post.header-img %}assets/{{ post.header-img }}{% endif %}"/></div>
 <br/>{% elsif tag.header-img %}
